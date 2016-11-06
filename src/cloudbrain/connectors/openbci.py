@@ -133,7 +133,7 @@ class OpenBCIConnector(object):
 
         def read(n):
             b = self.ser.read(n)
-            # print bytes(b)
+            # print(bytes(b))
             return b
 
 
