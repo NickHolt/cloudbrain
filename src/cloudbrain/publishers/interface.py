@@ -8,10 +8,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 
-class PublisherInterface(object):
-    __metaclass__ = ABCMeta
-
-
+class PublisherInterface(object, metaclass=ABCMeta):
     def __init__(self, base_routing_key):
 
         self.base_routing_key = base_routing_key

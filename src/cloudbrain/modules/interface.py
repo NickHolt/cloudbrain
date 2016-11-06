@@ -2,10 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 
-class ModuleInterface(object):
-    __metaclass__ = ABCMeta
-
-
+class ModuleInterface(object, metaclass=ABCMeta):
     def __init__(self, subscribers, publishers):
 
         assert isinstance(publishers, list)

@@ -8,10 +8,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 
-class SubscriberInterface(object):
-    __metaclass__ = ABCMeta
-
-
+class SubscriberInterface(object, metaclass=ABCMeta):
     def __init__(self, base_routing_key):
 
         self.base_routing_key = base_routing_key
