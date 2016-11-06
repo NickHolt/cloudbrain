@@ -137,7 +137,7 @@ class OpenBCIConnector(object):
             return b
 
 
-        for rep in xrange(max_bytes_to_skip):
+        for rep in range(max_bytes_to_skip):
 
             # Looking for start and save id when found
             if self.read_state == 0:
@@ -158,7 +158,7 @@ class OpenBCIConnector(object):
 
             elif self.read_state == 1:
                 channel_data = []
-                for c in xrange(self.channels):
+                for c in range(self.channels):
 
                     # 3 byte ints
                     literal_read = read(3)
@@ -184,7 +184,7 @@ class OpenBCIConnector(object):
 
             elif self.read_state == 2:
                 aux_data = []
-                for a in xrange(3):
+                for a in range(3):
                     # short(h)
                     acc = struct.unpack('h', read(2))[0]
                     aux_data.append(acc)
